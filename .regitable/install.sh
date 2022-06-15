@@ -127,7 +127,7 @@ fi
 # check remote ssh key, create if neeeded
 # ----------------------------------------------
 [ ! -f $GBUP/remote.key ] && \
-  dropbearkey -t rsa -f $GBUP/remote.key | grep "^ssh-rsa" > $GBUP/remote.key.pub
+  dropbearkey -t ecdsa -f $GBUP/remote.key | grep "^ecdsa-sha2-nistp256" > $GBUP/remote.key.pub
 
 
 # ----------------------------------------------
