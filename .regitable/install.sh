@@ -89,8 +89,9 @@ if [ ! -f /opt/bin/git-lfs ]; then
   chmod +x /opt/bin/git-lfs
 fi
 
-rm $GBUP/git-lfs.tar.gz
-
+if [ ! -f $GBUP/git-lfs.tar.gz ]; then
+    rm $GBUP/git-lfs.tar.gz
+fi
 
 # ----------------------------------------------
 # check reGitable directories, create if neeeded
